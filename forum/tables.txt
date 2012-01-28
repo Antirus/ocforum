@@ -1,0 +1,54 @@
+CREATE TABLE `oc_discussions` (                                
+                  `id` int(11) NOT NULL AUTO_INCREMENT,                        
+                  `title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,        
+                  `body` text CHARACTER SET utf8,                              
+                  `user_id` int(11) DEFAULT NULL,                              
+                  `date` datetime DEFAULT NULL,                                
+                  `category_id` int(11) DEFAULT NULL,                          
+                  `status` tinyint(1) DEFAULT '1',                             
+                  `views` int(11) DEFAULT '0',                                 
+                  `comments` int(11) DEFAULT '0',                              
+                  `user_type` varchar(255) CHARACTER SET utf8 DEFAULT 'user',  
+                  PRIMARY KEY (`id`)                                           
+                ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 
+                
+CREATE TABLE `oc_admins_groups` (                        
+                    `id` int(11) NOT NULL AUTO_INCREMENT,                  
+                    `title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,  
+                    `permissions` text CHARACTER SET utf8,                 
+                    PRIMARY KEY (`id`)                                     
+                  ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8  
+
+CREATE TABLE `oc_users_groups` (                         
+                   `id` int(11) NOT NULL AUTO_INCREMENT,                  
+                   `title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,  
+                   `permissions` text CHARACTER SET utf8,                 
+                   PRIMARY KEY (`id`)                                     
+                 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 
+
+CREATE TABLE `oc_categories` (                           
+                 `id` int(11) NOT NULL AUTO_INCREMENT,                  
+                 `category_id` int(11) DEFAULT NULL,                    
+                 `name` varchar(255) CHARACTER SET utf8 NOT NULL,       
+                 `slug` varchar(255) CHARACTER SET utf8 DEFAULT NULL,   
+                 `count` int(11) DEFAULT '0',                           
+                 PRIMARY KEY (`id`),                                    
+                 UNIQUE KEY `UNIQUE_USER_CATEGORY` (`name`)             
+               ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8  
+                                    
+CREATE TABLE `oc_comments` (                                   
+               `id` int(11) NOT NULL AUTO_INCREMENT,                        
+               `body` text CHARACTER SET utf8,                              
+               `discussion_id` int(11) DEFAULT NULL,                        
+               `user_id` int(11) DEFAULT NULL,                              
+               `date` datetime DEFAULT NULL,                                
+               `user_type` varchar(255) CHARACTER SET utf8 DEFAULT 'user',  
+               PRIMARY KEY (`id`)                                           
+             ) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8  
+
+CREATE TABLE `oc_settings` (                             
+               `id` int(11) NOT NULL AUTO_INCREMENT,                  
+               `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,   
+               `value` text CHARACTER SET utf8,                       
+               PRIMARY KEY (`id`)                                     
+             ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 

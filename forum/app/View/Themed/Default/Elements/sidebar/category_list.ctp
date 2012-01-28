@@ -1,0 +1,1 @@
+<?php $this->Category->categoryMenu($Categories, $Discussions) ?>

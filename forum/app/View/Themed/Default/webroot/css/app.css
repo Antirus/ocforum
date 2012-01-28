@@ -1,0 +1,126 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+div#header{
+	margin-top: 20px;
+}
+.align-right{
+	text-align: right;
+}
+
+textarea.comment-body{
+	width: 630px;
+	height: 170px;
+}
+div.comment-edit form textarea.comment-body{
+	width: 610px;
+	height: 170px;
+}
+
+textarea.admin-body{
+	width: 500px;
+	height: 200px;
+}
+div#discussion-comments tr p{
+	margin: 0 0 12px;
+}
+
+div#discussion-comments tr ul{
+	list-style: inherit;
+}
+
+div#discussion-comments tr ul li{
+	margin: 0px 0px 0px 16px;
+	list-style: inherit;
+}
+
+div#discussion-comments tr ul li p{
+	margin:0px;
+}
+
+form.hidden-form{
+	display:none;
+}
+
+img#ajax-loader{
+	display: none;
+}
+
+ul.nav-bar{
+	margin-top: 0px;
+}
+
+.nav-bar > li > a {
+	font-size: 14px;
+	padding: 0 15px;
+}
+
+.nav-bar > li.last{
+	border-right:none
+}
+table.long-table{
+	width: 100%;
+}
+table.long-table th{
+	text-align: left;	
+	padding: 10px;
+}
+
+table.list{
+	border: none;
+}
+
+table.list tr{
+	border-bottom: 1px solid #ddd;
+}
+
+h4.discussion-title{
+	font-size: 14px;
+}
+
+td.td-comments{
+	text-align: center;
+	width: 90px;
+}
+
+dl.dl-categories.nice.tabs.vertical{
+	border: none;
+}
+
+dl.dl-categories.nice.tabs.vertical dd a{
+	border: none;
+	border-bottom: 1px solid #ddd;
+	padding: 10px 15px;
+	font-size:12px;
+}
+span.menu-catname{
+	width: 100%;
+	text-align: left;
+}
+span.menu-catcount{
+	text-align: right;
+	width: 33%;
+	display: block;
+	float: right;
+}
+
+div.login{
+	width: 280px;
+}
+
+.max-width-none{
+	max-width: none;
+}
+

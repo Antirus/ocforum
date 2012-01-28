@@ -1,0 +1,1 @@
+<?php $this->Comment->latesComments($Comments) ?>

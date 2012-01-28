@@ -1,0 +1,1 @@
+<?php $this->Discussion->latesDiscussions($Discussions) ?>

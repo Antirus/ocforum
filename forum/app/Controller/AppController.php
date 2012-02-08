@@ -25,6 +25,7 @@ class AppController extends Controller {
 		}
 
 		Configure::write('pagination_limit', $settings['Setting']['pagination_limit']);
+		Configure::write('shop_url', $settings['Setting']['shop_url']);
 
 		$this->set('shop_url', $settings['Setting']['shop_url']);
 		$this->set('forum_name', $settings['Setting']['forum_name']);
